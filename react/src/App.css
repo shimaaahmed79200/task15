@@ -1,0 +1,310 @@
+/* Root container settings */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Main application styling */
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Image list grid layout */
+.image-list {
+  display: grid;
+  gap: 30px;
+  padding: 20px;
+  margin-top: 40px;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+}
+
+/* Image card styling */
+.image-card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image item styling */
+.image-item {
+  /* display: block; */
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  transition: transform 0.3s ease;
+}
+
+/* Image info styling */
+.image-info {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.096); /* Darker background for better contrast */
+  width: 100%;
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+.image-info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.image-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+/* Image hover effect */
+.image-item:hover {
+  transform: scale(1.05);
+}
+
+/* Image detail view styling */
+.image-detail {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image-detail-view {
+  max-width: 100%;
+  height: 100%;
+}
+
+p {
+  color: rgb(132, 131, 131);
+}
+
+/* Close button for the image detail view */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #c4c4c4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-button:hover {
+  background-color: #ff4b4b;
+}
+
+/* Header styling */
+header {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 3rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgb(207, 205, 205);
+  opacity: 0;
+  animation: appear 0.5s forwards ease-in;
+}
+
+/* Button styling */
+button {
+  border: none;
+  color: #787878;
+  font-size: 18px;
+  background-color: #f6f5f5;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #424242;
+}
+
+/* Artist details section */
+.artist-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.artist-details a {
+  color: #878585;
+  font-size: 16px;
+}
+
+span {
+  font-size: 170px;
+  font-weight: bold;
+  color: #c1bdbd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .image-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large tablets */
+  }
+
+  header {
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+
+  header {
+    margin: 0 1rem;
+  }
+
+  .image-info h3 {
+    font-size: 14px; /* Slightly smaller text */
+  }
+
+  .image-info p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-list {
+    grid-template-columns: 1fr; /* 1 column for mobile devices */
+  }
+
+  .image-info h3 {
+    font-size: 14px;
+  }
+
+  .image-info p {
+    font-size: 12px;
+  }
+
+  .close-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  header {
+    margin: 0 0.5rem;
+  }
+}
+
+/* Animation for the header */
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.image-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  flex-direction: row;
+  gap: 2rem;
+  position: relative;
+}
+
+.image-detail img {
+  max-width: 700px;
+  height: 100%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+  max-width: 600px;
+  padding: 20px;
+  text-align: left;
+  
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f5f5;
+}
+
+.text-content h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+  background-color: #f6f5f5;
+}
+
+.text-content h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #666;
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.text-content .year {
+  font-size: 10rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.093);
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .image-detail {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .image-detail img {
+    max-width: 100%;
+  }
+
+  .text-content {
+    padding: 0;
+    text-align: center;
+  }
+
+  .text-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+  }
+
+  .text-content .year {
+    font-size: 5rem;
+    right: 5%;
+    top: 5%;
+  }
+}
+
+
