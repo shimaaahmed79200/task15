@@ -16,10 +16,12 @@
 /* Image list grid layout */
 .image-list {
   display: grid;
-  gap: 30px;
+  gap: 40px;
   padding: 20px;
   margin-top: 40px;
   grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+
+
 }
 
 /* Image card styling */
@@ -34,6 +36,9 @@
 .image-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.image-card img{
+
 }
 
 /* Image item styling */

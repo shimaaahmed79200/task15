@@ -28,7 +28,7 @@ function App() {
     setSelectedImage(imagesData[0]);
     };
 
-   const stopSlideshow = () => {
+  const stopSlideshow = () => {
     setIsSlideshow(false);
     setSelectedImage(null);
     setCurrentSlide(0);
